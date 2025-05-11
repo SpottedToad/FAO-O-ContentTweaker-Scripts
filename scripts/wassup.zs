@@ -1,16 +1,11 @@
+#loader contenttweaker
+
 import contenttweaker.builder.vanilla.item.Basic;
+import contenttweaker.object.vanilla.property.FoodItemProperties;
+import contenttweaker.object.vanilla.property.StandardItemProperties;
 
-val exampleItem = <factory:item>.typed<Basic>();
+val testingTab = <factory:creative_tab>.create("testingTab", <item:minecraft:gravel>);
 
-exampleItem
-    .withName("Example Item")
-    .withMaxStackSize(64)
-    .withTooltip(["This is a custom item made with ContentTweaker!"])
-    .inCreativeTab("misc")
-    .withTexture("contenttweaker:example_item");
-
-exampleItem.register();
-
-
-val exampleMessage = "!!!!!!!!!ITS WORKING!!!!!!!!!!!! (maybe)";
-println(exampleMessage);
+val testItem = <factory:item>.typed<Basic>()
+    .tab(testingTab)
+    .build("test_item");
