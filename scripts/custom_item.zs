@@ -9,8 +9,8 @@ val exampleItem = <factory:item>.typed<Basic>();
 
 exampleItem
     .withName("Example Item")
-    .withMaxStackSize(64)
-    .withToolTip(["This is a custom item made with ContentTweaker!"])
-    .inCreativeTab("misc")
+    .inCreativeTab(tools)
     .withTexture("contenttweaker:example_item");
     exampleItem.register();
+
+print("Registering Example Item...");
